@@ -1,15 +1,17 @@
 <template>
   <div class="home">
     <h1>{{ $t('message') }}</h1>
+    <MoviesAccordeon />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import MoviesAccordeon from '@/components/MoviesAccordeon.vue'
 
 export default {
   name: 'HomeView',
   components: {
+    MoviesAccordeon
   },
   mounted() {
     console.log(this.$i18n)

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="btn-group" role="group">
+    <div class="btn-group flex-column flex-sm-row" role="group">
         <button v-for="item in $i18n.availableLocales"
           :key="item"
           type="button"

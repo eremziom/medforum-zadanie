@@ -1,28 +1,21 @@
-
-import LanguageSelector from './components/LanguageSelector.vue';
-
 <template>
-  <div id="app">
-    <div class="d-flex justify-content-between align-items-center">
-      <ThemeSelector />
-      <nav>
-        <router-link to="/">{{ $t('router.home') }}</router-link> |
-        <router-link to="/about">{{ $t('router.about_me') }}</router-link>
-      </nav>
-      <LanguageSelector />
+  <div id="app" class="">
+    <TopBar />
+    <div class="views-container">
+      <router-view/>
     </div>
-    <router-view/>
+    <FooterBar />
   </div>
 </template>
 
 <script>
-import LanguageSelector from '@/components/LanguageSelector.vue'
-import ThemeSelector from '@/components/ThemeSelector.vue'
+import TopBar from '@/components/TopBar.vue'
+import FooterBar from '@/components/FooterBar.vue'
   export default {
     name: 'App',
     components: {
-      LanguageSelector,
-      ThemeSelector
+      TopBar,
+      FooterBar
     }
   }
 </script>

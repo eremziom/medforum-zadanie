@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="btn-group" role="group">
+    <div class="btn-group flex-column flex-sm-row" role="group">
       <button v-for="item in themes"
         :key="item"
         type="button"
@@ -11,7 +11,8 @@
         }"
         @click="changeTheme(item)"
       >
-        {{  item.toLocaleUpperCase() }}
+      <i 
+        :class="item === 'light' ? 'bi bi-sun' : 'bi bi-moon'"></i>
       </button>
     </div>
   </div>
