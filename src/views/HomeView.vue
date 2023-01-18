@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    {{ $t('message') }}
-    <button @click="changeLang">change lang</button>
+    <h1>{{ $t('message') }}</h1>
   </div>
 </template>
 

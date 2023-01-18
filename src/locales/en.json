@@ -1,3 +1,7 @@
 {
-    "message": "TEST MSG ENG"
+  "message": "English language",
+  "router": {
+    "home": "Home",
+    "about_me": "About me"
   }
+}

@@ -1,3 +1,7 @@
 {
-    "message": "TESTOWA WIADOMOŚĆ PL"
+  "message": "Język polski",
+  "router": {
+    "home": "Home",
+    "about_me": "O mnie"
   }
+}
