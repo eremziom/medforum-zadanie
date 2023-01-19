@@ -3,6 +3,11 @@
   "router": {
     "home": "Aufgabe",
     "about_me": "Über mich"
+  },
+  "movie": {
+    "ended": "Film ist zu Ende",
+    "started": "Film hat begonnen",
+    "middle": "Film ist in der Mitte"
   }
   
 }

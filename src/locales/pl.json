@@ -3,5 +3,10 @@
   "router": {
     "home": "Zadanie",
     "about_me": "O mnie"
+  },
+  "movie": {
+    "ended": "Film się zakończył",
+    "started": "Film się zaczął",
+    "middle": "Film osiągnął środek"
   }
 }

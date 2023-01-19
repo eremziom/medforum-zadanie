@@ -3,5 +3,10 @@
   "router": {
     "home": "Task",
     "about_me": "About me"
+  },
+  "movie": {
+    "ended": "Movie has ended",
+    "started": "Movie has started",
+    "middle": "Movie is in middle"
   }
 }

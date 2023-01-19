@@ -13,9 +13,6 @@ export default {
   components: {
     MoviesAccordeon
   },
-  mounted() {
-    console.log(this.$i18n)
-  },
   methods: {
     changeLang(){
       console.log(this.$i18n.locale)
