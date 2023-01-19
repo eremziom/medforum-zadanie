@@ -1,6 +1,5 @@
 @import 'variables'
 @import 'mixins'
-
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css")
 
 html, body
@@ -10,26 +9,25 @@ body
   @include set-background("light")
 
 body.dark
-  color: red
   @include set-background("dark")
-    
+  
 #app 
   font-family: Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-align: center
-  color: $color-text-main
   height: 100%
   display: flex
   flex-direction: column
     
 nav 
   padding: 30px
+  color: $color-text-secondary
 
 nav a 
   font-weight: bold
   color: $color-text-secondary
-
+  text-decoration: none
 
 nav a.router-link-exact-active 
   color: $color-element-active
@@ -45,3 +43,12 @@ nav a.router-link-exact-active
   width: 100%
   margin: 0 auto
 
+.tech
+  max-width: 400px
+  margin: 0 auto
+  font-size: 20px
+  font-weight: bold
+
+footer
+  color: $color-text-secondary
+  font-size: 10px

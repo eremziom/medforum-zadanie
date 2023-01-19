@@ -1,10 +1,10 @@
 <template>
   <div
-    class="home p-2"
+    class="p-2"
   >
-    <h1>
-      {{ $t('message') }}
-    </h1>
+    <h2>
+      {{ $t('home.title') }}
+    </h2>
     <MoviesAccordeon />
   </div>
 </template>

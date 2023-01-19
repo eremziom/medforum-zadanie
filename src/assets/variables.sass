@@ -1,3 +1,5 @@
+@import '../../node_modules/bootstrap/scss/bootstrap'
+
 $color-background-dark: mix(black, blue, 90)
 $color-background-light: mix(white, cyan, 90)
 
@@ -8,11 +10,17 @@ $color-text-secondary: #aec8e2
 
 $color-element-active: #42b983
 
-$views-width: 1024px
+$accordion-bg: $color-text-main
+$accordion-border-color: $color-app-main
+$accordion-button-active-bg: $color-app-main
+$accordion-button-focus-border-color: none
+$accordion-button-focus-box-shadow: none
+$accordion-button-color: $color-text-secondary
+$accordion-button-active-color: $color-text-secondary
+$accordion-icon-color: $color-text-secondary
+$accordion-icon-active-color: $color-text-secondary
 
-// @for $i from 20 through 100 
-//     @if $i % 10 == 0 
-//         $percentage: $i*1%
-//         .mix-black-#{$i} 
-//             background-color: mix(black, cyan, $percentage)
-    
+$list-group-bg: $color-text-main
+$list-group-color: $color-text-secondary
+
+$views-width: 1024px

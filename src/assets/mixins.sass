@@ -6,5 +6,12 @@
 %bg-light
     background-color: $color-background-light
 
+%txt-dark
+    color: $color-text-secondary
+    
+%txt-light
+    color: $color-text-main
+
 @mixin set-background($arg)
     @extend %bg-#{$arg}
+    @extend %txt-#{$arg}

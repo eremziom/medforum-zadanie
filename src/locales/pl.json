@@ -1,5 +1,10 @@
 {
-  "message": "Język polski",
+  "home": {
+    "title": "Lista filmów"
+  },
+  "tech": {
+    "title": "Technologie użyte w zadaniu"
+  },
   "router": {
     "home": "Zadanie",
     "tech_stack": "Technologie"
@@ -8,5 +13,9 @@
     "ended": "Film {title} się zakończył",
     "started": "Film {title} się rozpoczął",
     "middle": "Film {title} osiągnął środek"
+  },
+  "footer": {
+    "right": "Wszelkie prawa zastrzeżone",
+    "for": "Wykonano dla: "
   }
 }

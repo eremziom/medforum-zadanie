@@ -3,7 +3,7 @@
     class="top-container"
   >
     <div 
-      class="d-flex justify-content-between align-items-center"
+      class="d-flex justify-content-between align-items-center px-2"
     >
       <ThemeSelector />
       <nav>

@@ -1,5 +1,10 @@
 {
-  "message": "English language",
+  "home": {
+    "title": "Movie list"
+  },
+  "tech": {
+    "title": "Technologies used in task"
+  },
   "router": {
     "home": "Task",
     "tech_stack": "Technologies"
@@ -8,5 +13,9 @@
     "ended": "Movie {title} has ended",
     "started": "Movie {title} has started",
     "middle": "Movie {title} is in middle"
+  },
+  "footer": {
+    "right": "All rights reserved",
+    "for": "Made for: "
   }
 }
