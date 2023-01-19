@@ -1,7 +1,21 @@
 <template>
   <div>
-    <video width="640" height="480" controls :id="'video'+movie.id" autoplay muted v-on:play="movieStart" v-on:pause="moviePaused" v-on:ended="movieEnded" v-on:timeupdate="movieTimeCheck">
-      <source :src="movie.url" type="video/mp4">
+    <video
+      width="100%"
+      height="auto"
+      controls
+      :id="'video'+movie.id"
+      autoplay
+      muted
+      v-on:play="moviePlayCheck"
+      v-on:pause="moviePaused"
+      v-on:ended="consoleMessage('movie.ended')"
+      v-on:timeupdate="movieTimeCheck"
+      v-on:loadedmetadata="sendLength"
+    >
+      <source
+        :src="movie.url"
+        type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -13,29 +27,36 @@ export default {
   props: {
     movie: Object,
   },
+  mounted() {
+    let video = document.getElementById('video'+this.movie.id)
+    this.video = video
+  },
   methods: {
-    changeMiddleAchieved(){
-      this.middleAchieved = !this.middleAchieved
+    sendLength(){
+      this.videoLength = this.video.duration
+      this.$emit('videoLength', this.videoLength, this.movie.id)
     },
     movieTimeCheck(){
-      let video = document.getElementById('video'+this.movie.id)
-      let halfOfVideo = video.duration / 2
-      video.currentTime > halfOfVideo && !this.middleAchieved
-        ? (this.movieMiddle(), this.changeMiddleAchieved())
-        : this.middleAchieved && video.currentTime < halfOfVideo
+      let halfOfVideo = this.video.duration / 2
+      this.video.currentTime > halfOfVideo && !this.middleAchieved
+        ? (this.consoleMessage('movie.middle'), this.changeMiddleAchieved())
+        : this.middleAchieved && this.video.currentTime < halfOfVideo
         ? this.changeMiddleAchieved()
         : ''
     },
-    movieEnded(){
-      console.log(this.$t('movie.ended'))
+    moviePlayCheck(){
+      !this.videoPaused
+        ? this.consoleMessage('movie.started')
+        : ''
+      this.video.currentTime < 0.01 && this.videoPaused
+        ? this.consoleMessage('movie.started')
+        : ''
     },
-    movieStart(){
-      !this.videoPaused ?
-      console.log(this.$t('movie.started'))
-      : ''
+    changeMiddleAchieved(){
+      this.middleAchieved = !this.middleAchieved
     },
-    movieMiddle(){
-      console.log(this.$t('movie.middle'))
+    consoleMessage(message){
+      console.log(this.$t(message, {title: this.movie.title}))
     },
     moviePaused(){
       this.videoPaused = true
@@ -43,8 +64,10 @@ export default {
   },
   data(){
     return {
+      video: null,
       middleAchieved: false,
       videoPaused: false,
+      videoLength: 0
     }
   }
 }

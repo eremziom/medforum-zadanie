@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div class="btn-group flex-column flex-sm-row" role="group">
-      <button v-for="item in themes"
+    <div
+      class="btn-group flex-column flex-sm-row"
+      role="group"
+    >
+      <button
+        v-for="item in themes"
         :key="item"
         type="button"
         class="m-1 btn-sm"
@@ -12,7 +16,11 @@
         @click="changeTheme(item)"
       >
       <i 
-        :class="item === 'light' ? 'bi bi-sun' : 'bi bi-moon'"></i>
+        :class="item === 'light'
+        ? 'bi bi-sun'
+        : 'bi bi-moon'"
+      >
+      </i>
       </button>
     </div>
   </div>
@@ -30,7 +38,6 @@
       changeTheme(theme){
         document.body.classList.add(theme)
         for(let item of this.themes){
-          console.log(item, theme)
           item === theme ? this.currentTheme = theme : document.body.classList.remove(item)
         }
       }

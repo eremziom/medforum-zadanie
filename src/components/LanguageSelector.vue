@@ -1,18 +1,22 @@
 <template>
   <div>
-    <div class="btn-group flex-column flex-sm-row" role="group">
-        <button v-for="item in $i18n.availableLocales"
-          :key="item"
-          type="button"
-          class="m-1 btn-sm"
-          :class="{
-            'btn btn-dark' : item !== computedLanguage,
-            'btn btn-success' : item === computedLanguage
-          }"
-          @click="changeLanguage(item)"
-        >
-          {{  item.toLocaleUpperCase() }}
-        </button>
+    <div 
+      class="btn-group flex-column flex-sm-row"
+      role="group"
+    >
+      <button 
+        v-for="item in $i18n.availableLocales"
+        :key="item"
+        type="button"
+        class="m-1 btn-sm"
+        :class="{
+          'btn btn-dark' : item !== computedLanguage,
+          'btn btn-success' : item === computedLanguage
+        }"
+        @click="changeLanguage(item)"
+      >
+        {{  item.toLocaleUpperCase() }}
+      </button>
     </div>
   </div>
 </template>

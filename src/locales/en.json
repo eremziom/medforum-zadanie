@@ -2,11 +2,11 @@
   "message": "English language",
   "router": {
     "home": "Task",
-    "about_me": "About me"
+    "tech_stack": "Technologies"
   },
   "movie": {
-    "ended": "Movie has ended",
-    "started": "Movie has started",
-    "middle": "Movie is in middle"
+    "ended": "Movie {title} has ended",
+    "started": "Movie {title} has started",
+    "middle": "Movie {title} is in middle"
   }
 }

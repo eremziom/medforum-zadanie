@@ -1,7 +1,12 @@
 <template>
-  <div id="app" class="">
+  <div
+    id="app" 
+    class=""
+  >
     <TopBar />
-    <div class="views-container">
+    <div 
+      class="views-container"
+    >
       <router-view/>
     </div>
     <FooterBar />

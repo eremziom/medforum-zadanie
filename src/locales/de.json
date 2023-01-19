@@ -2,12 +2,12 @@
   "message": "Deutsch Sprache",
   "router": {
     "home": "Aufgabe",
-    "about_me": "Über mich"
+    "tech_stack": "Technologien"
   },
   "movie": {
-    "ended": "Film ist zu Ende",
-    "started": "Film hat begonnen",
-    "middle": "Film ist in der Mitte"
+    "ended": "Film {title} ist zu Ende",
+    "started": "Film {title} hat begonnen",
+    "middle": "Film {title} ist in der Mitte"
   }
   
 }

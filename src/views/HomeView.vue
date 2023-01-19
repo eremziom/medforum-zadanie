@@ -1,6 +1,10 @@
 <template>
-  <div class="home">
-    <h1>{{ $t('message') }}</h1>
+  <div
+    class="home p-2"
+  >
+    <h1>
+      {{ $t('message') }}
+    </h1>
     <MoviesAccordeon />
   </div>
 </template>
@@ -13,11 +17,5 @@ export default {
   components: {
     MoviesAccordeon
   },
-  methods: {
-    changeLang(){
-      console.log(this.$i18n.locale)
-      this.$i18n.locale = 'en'
-    }
-  }
 }
 </script>

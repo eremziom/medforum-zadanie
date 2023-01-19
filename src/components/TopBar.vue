@@ -1,10 +1,22 @@
 <template>
-  <div class="top-container" >
-    <div class="d-flex justify-content-between align-items-center">
+  <div 
+    class="top-container"
+  >
+    <div 
+      class="d-flex justify-content-between align-items-center"
+    >
       <ThemeSelector />
       <nav>
-        <router-link to="/">{{ $t('router.home') }}</router-link> |
-        <router-link to="/about">{{ $t('router.about_me') }}</router-link>
+        <router-link 
+          to="/"
+        >
+          {{ $t('router.home') }}
+        </router-link> |
+        <router-link
+          to="/tech-stack"
+        >
+          {{ $t('router.tech_stack') }}
+        </router-link>
       </nav>
       <LanguageSelector />
     </div>
